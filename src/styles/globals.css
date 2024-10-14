@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;700;800&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  width: 100% !important;
+}
+
+body {
+  font-family: "Alegreya Sans", sans-serif;
+  width: 100% !important;
+}
+
+@layer components {
+  .header_top__icon_wrapper {
+    @apply bg-gray-200 rounded-md p-[6px] text-[14px] hover:bg-primary hover:text-white;
+  }
+
+  .children-container-margin {
+    @apply lg:mt-[100px] mt-[51px];
+  }
+
+  .children-container-margin-normal {
+    @apply mt-[140px] lg:mt-[168px];
+  }
+
+  .nav {
+    position: relative;
+  }
+
+  .nav-less-padding {
+    @apply lg:p-0 !important;
+    @apply lg:pt-6 !important;
+  }
+
+  .navbar-fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+  .navbar__link {
+    font-weight: bold;
+  }
+
+  .navbar__link:hover {
+    @apply text-primary;
+    transition: all 0.4s;
+  }
+
+  .navbar__link::after {
+    position: absolute;
+    content: "";
+    @apply bg-primary;
+    height: 3px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    scale: 0;
+    transform-origin: left;
+    transition: all 0.4s;
+  }
+
+  .navbar__link:hover::after {
+    scale: 1;
+  }
+
+  .openMenu::after {
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+
+  .menu-scroll-active {
+    @apply lg:static !important;
+    @apply lg:m-0 !important;
+    @apply lg:p-0 !important;
+  }
+
+  .menu-scroll-active-sub {
+    @apply text-black !important;
+  }
+}
